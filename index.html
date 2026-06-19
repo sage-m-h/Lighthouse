@@ -4,10 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
+
+    .divider {
+      height: 1px;
+      background: rgba(0,0,0,0.12);
+      margin: 18px 0;
+    }
+    
     body {
       margin: 0;
       padding: 20px;
       font-family: -apple-system, sans-serif;
+      font-weight: bold;
 
       /* light base */
       background-color: #f4f4f4;
@@ -46,14 +54,23 @@
 <body>
 
   <div class="grid">
-    <button onclick="openSheet('1uT3K_eaYQCWMVPRobpvZx5cFjYvrMspkb5-7KII2et4')">College Planning</button>
-    <button onclick="openSheet('YOUR_SHEET_ID_2')">Inventory</button>
+    <button onclick="openLink('https://docs.google.com/spreadsheets/d/1uT3K_eaYQCWMVPRobpvZx5cFjYvrMspkb5-7KII2et4/edit')">College Planning</button>
+    <button onclick="openLink('https://docs.google.com/spreadsheets/d/1iAIpPB8E1OGJeiqRQpiGMC1EkhNp4793FxSKN3PKRw8/edit')">Work Work</button>
+    <button onclick="openLink('https://docs.google.com/spreadsheets/d/1JjVk1r953MLBSgJ2AlZ6epiW_tBqzuPYawXQGMtWF0o/edit')">Turk-Hofmann Calendar</button>
+    <button onclick="openLink('https://employeeservices.swarthmore.edu/EmployeeSelfService/ssb/hrDashboard#/hrDashboard')">Employee Dashboard</button>
+    
   </div>
 
+  <div class="divider"></div>
+
+  <div class="grid">
+    <button onclick="openLink('https://docs.google.com/spreadsheets/d/1uT3K_eaYQCWMVPRobpvZx5cFjYvrMspkb5-7KII2et4/edit')">College Planning</button>
+    <button onclick="openLink('https://example.com')">Inventory</button>
+  </div>
+  
   <script>
-    function openSheet(id) {
-      window.location.href =
-        "https://docs.google.com/spreadsheets/d/" + id + "/edit";
+    function openLink(url) {
+      window.location.href = url;
     }
   </script>
 
